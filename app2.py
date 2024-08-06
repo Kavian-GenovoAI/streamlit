@@ -74,5 +74,5 @@ if st.session_state.printer_selected:
             st.button(issue, on_click=select_issue, args=(issue,))
 
 
-pdf_viewer("https://github.com/Kavian-GenovoAI/streamlit/blob/59c42fd717d6de8646f459d17a36bb3854fa8329/116441.pdf")
+pdf_viewer("https://quantumevents.ca/wp-content/uploads/2024/08/116441.pdf")
 
