@@ -3,7 +3,7 @@ import os
 from streamlit_pdf_viewer import pdf_viewer
 import json
 
-st.title("Support Helper Demonstration")
+st.title("Reference Chatbot with PDF Viewer")
 
 
 if "messages" not in st.session_state:
