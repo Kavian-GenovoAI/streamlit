@@ -77,7 +77,7 @@ if st.session_state.printer_selected:
 
 
 
-st.title("PDF Viewer in Streamlit")
+st.title("PDF Viewer")
 
 # Path to your PDF file
 pdf_file_path = "116441.pdf"
