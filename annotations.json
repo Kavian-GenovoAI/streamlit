@@ -3,14 +3,14 @@
     "page": 1,
     "x": 220,
     "y": 155,
-    "height": 500,
-    "width": 500,
+    "height": 200,
+    "width": 200,
     "color": "red"
   },
   {
     "page": 1,
-    "x": 400,
-    "y": 500,
+    "x": 220,
+    "y": 300,
     "height": 7,
     "width": 35,
     "color": "orange"
