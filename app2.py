@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_pdf_viewer import pdf_viewer
 
 st.title("Support Helper Demonstration")
 
@@ -73,5 +74,5 @@ if st.session_state.printer_selected:
             st.button(issue, on_click=select_issue, args=(issue,))
 
 
-
+pdf_viewer("str, path or bytes")
 
