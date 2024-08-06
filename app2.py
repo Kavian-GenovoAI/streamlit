@@ -1,6 +1,7 @@
 import streamlit as st
 import os
 from streamlit_pdf_viewer import pdf_viewer
+import json
 
 st.title("Support Helper Demonstration")
 
@@ -82,8 +83,24 @@ st.title("PDF Viewer in Streamlit")
 pdf_file_path = "116441.pdf"
 
 # Check if the file exists
-if os.path.exists(pdf_file_path):
-    pdf_viewer(pdf_file_path)
-else:
-    st.error(f"File not found: {pdf_file_path}")
+# if os.path.exists(pdf_file_path):
+#     pdf_viewer(pdf_file_path)
+# else:
+#     st.error(f"File not found: {pdf_file_path}")
 
+# Path to your annotations JSON file
+annotations_file_path = "annotations.json"
+
+# Read annotations from the JSON file
+if os.path.exists(annotations_file_path):
+    with open(annotations_file_path, 'r') as f:
+        annotations = json.load(f)
+else:
+    st.error(f"Annotations file not found: {annotations_file_path}")
+    annotations = []
+
+# Display the PDF with annotations
+if os.path.exists(pdf_file_path):
+    pdf_viewer(pdf_file_path, annotations=annotations)
+else:
+    st.error(f"PDF file not found: {pdf_file_path}")
