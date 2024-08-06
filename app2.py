@@ -1,4 +1,5 @@
 import streamlit as st
+import os
 from streamlit_pdf_viewer import pdf_viewer
 
 st.title("Support Helper Demonstration")
@@ -74,5 +75,15 @@ if st.session_state.printer_selected:
             st.button(issue, on_click=select_issue, args=(issue,))
 
 
-pdf_viewer("https://quantumevents.ca/wp-content/uploads/2024/08/116441.pdf")
+
+st.title("PDF Viewer in Streamlit")
+
+# Path to your PDF file
+pdf_file_path = "116441.pdf"
+
+# Check if the file exists
+if os.path.exists(pdf_file_path):
+    pdf_viewer(pdf_file_path)
+else:
+    st.error(f"File not found: {pdf_file_path}")
 
